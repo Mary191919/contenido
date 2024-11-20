@@ -1,13 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  overflow: hidden; 
-}
 .back-button {
   background-color: #9c835c;
   color: white;
@@ -26,6 +16,7 @@ html, body {
   z-index: 10; 
 }
 
+
 .back-button:hover {
   background-color: #ddccb4;
 }
@@ -33,6 +24,26 @@ html, body {
 .back-button i {
   margin-right: 8px;
 }
+
+
+
+.falling-stars .star:nth-child(5) {
+  left: 70%;
+  animation-duration: 6.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  overflow: hidden; 
+}
+
 
 .candle-count-display {
   text-align: center;
@@ -56,6 +67,7 @@ html, body {
   font-weight: bold;
   color: #AD030F;
 }
+
 .cake {
   position: absolute;
   width: 250px;
@@ -76,6 +88,11 @@ html, body {
   border-radius: 50%;
   box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
 }
+
+.cake > * {
+  position: absolute;
+}
+
 .layer {
   position: absolute;
   display: block;
@@ -88,7 +105,19 @@ html, body {
               0 22px 0px #7a532a, 0 24px 0px #7a532a, 0 26px 0px #7a532a, 0 28px 0px #7a532a, 0 30px 0px #7a532a;
 }
 
-/* Icing */
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
 .icing {
   top: 2px;
   left: 5px;
@@ -97,7 +126,6 @@ html, body {
   height: 90px;
   border-radius: 50%;
 }
-
 .icing:before {
   content: "";
   position: absolute;
@@ -110,6 +138,38 @@ html, body {
   border-radius: 50%;
   z-index: 1;
 }
+
+.drip {
+ display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #f0e4d0; 
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
 .candle {
   background-color: #7B020B;
   width: 12px;
@@ -120,7 +180,6 @@ html, body {
   margin-left: -8px;
   z-index: 10;
 }
-
 .candle:before {
   content: "";
   position: absolute;
@@ -150,6 +209,7 @@ html, body {
   transform-origin: 50% 90%;
   animation: flicker 1s ease-in-out alternate infinite;
 }
+
 @keyframes flicker {
   0% {
     transform: skewX(5deg);
@@ -188,102 +248,14 @@ html, body {
     align-items: center;
 }
 
-.footer a {
-    color: #dddbdb;
-    text-decoration: none;
-    margin-left: 10px;
+.heart {
+    animation: blink 1s linear infinite;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
 }
-
-.footer a:hover {
-    color: #9c835c;
-}
-
-.footer .icon {
-    margin-right: 5px;
-}
-
-@media screen and (max-width: 768px) {
-  .back-button {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 15px;
-    font-size: 1rem;
-  }
-
-  .candle-count-display {
-    font-size: 22px;
-  }
-
-  .cake {
-    width: 200px;
-    height: 160px;
-  }
-
-  .plate {
-    width: 230px;
-    height: 90px;
-  }
-
-  .layer {
-    width: 200px;
-    height: 80px;
-  }
-
-  .icing {
-    width: 200px;
-    height: 80px;
-  }
-
-  .flame {
-    width: 8px;
-    height: 20px;
-  }
-
-  .footer {
-    font-size: 12px;
-    padding: 5px 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .back-button {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  .candle-count-display {
-    font-size: 18px;
-  }
-
-  .cake {
-    width: 180px;
-    height: 140px;
-  }
-
-  .plate {
-    width: 210px;
-    height: 80px;
-  }
-
-  .layer {
-    width: 180px;
-    height: 70px;
-  }
-
-  .icing {
-    width: 180px;
-    height: 70px;
-  }
-
-  .flame {
-    width: 6px;
-    height: 18px;
-  }
-
-  .footer {
-    font-size: 10px;
-    padding: 3px 0;
-  }
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
