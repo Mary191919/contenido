@@ -22,6 +22,12 @@ const songs = [
     src: "/contenido/audio/ACDC - You Shook Me All Night Long.mp3",
     cover: "/contenido/imagen/musica2.jpg",
   },
+   {
+    title: "Sol",
+    artist: "Willian",
+    src: "/contenido/audio/Willian - Sol.mp3",
+    cover: "/contenido/imagen/sol.jpeg",
+  },
   {
     title: "Rock N Roll Train",
     artist: "AC/DC",
