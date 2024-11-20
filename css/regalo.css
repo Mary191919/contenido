@@ -133,7 +133,64 @@ background-color: #967d8e;
 .back-button i {
 margin-right: 8px;
 }
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
+/* Responsividad */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .ticket {
+        padding: 60px 15px;
+    }
+
+    .ticket h3 {
+        font-size: 1.2rem;
+    }
+
+    .ticket span {
+        font-size: 2.5rem;
+    }
+
+    .back-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ticket {
+        padding: 40px 10px;
+    }
+
+    .ticket h3 {
+        font-size: 1rem;
+    }
+
+    .ticket span {
+        font-size: 2rem;
+    }
+
+    .back-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
 .footer {
     position: fixed;
     left: 0;
