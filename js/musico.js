@@ -13,20 +13,20 @@ const songs = [
   {
     title: "Thunderstruck",
     artist: "AC/DC",
-    src: "/contenido/audio/ACDC - Thunderstruck.mp3",
-    cover: "/contenido/imagen/acdc.png",
+    src: "/audio/ACDC - Thunderstruck.mp3",
+    cover: "/imagen/acdc.png",
   },
   {
     title: "You Shook Me All Night Long",
     artist: "AC/DC",
-    src: "/contenido/audio/ACDC - You Shook Me All Night Long.mp3",
-    cover: "/contenido/imagen/musica2.jpg",
+    src: "/audio/ACDC - You Shook Me All Night Long.mp3",
+    cover: "/imagen/musica2.jpg",
   },
   {
     title: "Rock N Roll Train",
     artist: "AC/DC",
-    src: "/contenido/audio/Rock N Roll Train .mp3",
-    cover: "/contenido/imagen/musica3.jpg",
+    src: "/audio/Rock N Roll Train .mp3",
+    cover: "/imagen/musica3.jpg",
   },
 ];
 
