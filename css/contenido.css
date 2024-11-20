@@ -139,13 +139,31 @@ body {
     flex-basis: 100%;
 }
 
+
+
 .footer {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #dddbdb;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer svg.heart {
-    vertical-align: middle;
+.heart {
+  animation: blink 1s linear infinite;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
