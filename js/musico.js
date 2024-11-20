@@ -13,20 +13,20 @@ const songs = [
   {
     title: "Thunderstruck",
     artist: "AC/DC",
-    src: "/audio/ACDC - Thunderstruck.mp3",
-    cover: "/imagen/acdc.png",
+    src: "/contenido/audio/ACDC - Thunderstruck.mp3",
+    cover: "/contenido/imagen/acdc.png",
   },
   {
     title: "You Shook Me All Night Long",
     artist: "AC/DC",
-    src: "/audio/ACDC - You Shook Me All Night Long.mp3",
-    cover: "/imagen/musica2.jpg",
+    src: "/contenido/audio/ACDC - You Shook Me All Night Long.mp3",
+    cover: "/contenido/imagen/musica2.jpg",
   },
   {
     title: "Rock N Roll Train",
     artist: "AC/DC",
-    src: "/audio/Rock N Roll Train .mp3",
-    cover: "/imagen/musica3.jpg",
+    src: "/contenido/audio/Rock N Roll Train .mp3",
+    cover: "/contenido/imagen/musica3.jpg",
   },
 ];
 
@@ -46,10 +46,10 @@ function togglePlay() {
   
   if (isPlaying) {
     audio.pause();
-    playIcon.src = "/imagen/jugar.png"; 
+    playIcon.src = "/contenido/imagen/jugar.png"; 
   } else {
     audio.play();
-    playIcon.src = "/imagen/pausa.png"; 
+    playIcon.src = "/contenido/imagen/pausa.png"; 
   }
   isPlaying = !isPlaying;
 }
@@ -58,7 +58,7 @@ function prevSong() {
   loadSong(songs[currentSongIndex]);
   audio.play();
   isPlaying = true;
-  document.getElementById("play-icon").src = "/imagen/pausa.png"; 
+  document.getElementById("play-icon").src = "/contenido/imagen/pausa.png"; 
 }
 
 function nextSong() {
@@ -66,7 +66,7 @@ function nextSong() {
   loadSong(songs[currentSongIndex]);
   audio.play();
   isPlaying = true;
-  document.getElementById("play-icon").src = "/imagen/pausa.png"; 
+  document.getElementById("play-icon").src = "/contenido/imagen/pausa.png"; 
 }
 
 audio.addEventListener("timeupdate", () => {
