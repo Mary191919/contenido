@@ -58,7 +58,7 @@ function prevSong() {
   loadSong(songs[currentSongIndex]);
   audio.play();
   isPlaying = true;
-  document.getElementById("play-icon").src = "/contenido/imagen/pausa.png"; 
+  document.getElementById("play-icon").src = "/imagen/pausa.png"; 
 }
 
 function nextSong() {
@@ -66,7 +66,7 @@ function nextSong() {
   loadSong(songs[currentSongIndex]);
   audio.play();
   isPlaying = true;
-  document.getElementById("play-icon").src = "/contenido/imagen/pausa.png"; 
+  document.getElementById("play-icon").src = "/imagen/pausa.png"; 
 }
 
 audio.addEventListener("timeupdate", () => {
